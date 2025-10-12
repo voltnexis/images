@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images - VoltNexis Image Library</title>
+    <meta name="description" content="Upload and share your high-quality images with the VoltNexis community">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">VoltNexis</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container upload-page">
+        <section class="upload-section">
+            <h2>Free Image Upload</h2>
+            <p>Share your stunning visuals with the VoltNexis community! Please ensure your images are high-quality and appropriate.</p>
+
+            <form id="uploadForm" class="upload-form">
+                <div class="form-group">
+                    <label for="uploaderName">Your Name:</label>
+                    <input type="text" id="uploaderName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="imageUpload">Select Image:</label>
+                    <input type="file" id="imageUpload" name="image" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="imageTitle">Image Title:</label>
+                    <input type="text" id="imageTitle" name="title" placeholder="e.g., Golden Hour Landscape" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="imageDescription">Description (Optional):</label>
+                    <textarea id="imageDescription" name="description" rows="4" placeholder="Briefly describe your image..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="uploaderBio">About You (Optional):</label>
+                    <textarea id="uploaderBio" rows="2" placeholder="Tell us about yourself..."></textarea>
+                </div>
+
+                <div class="image-preview" id="imagePreview">
+                    <p>No image selected.</p>
+                </div>
+
+                <button type="submit" class="submit-btn" id="upload-btn" disabled>Upload Image</button>
+                <div class="upload-progress" id="upload-progress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p id="progress-text">Uploading...</p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 VoltNexis Image Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="supabase-config.js"></script>
+    <script src="upload-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Image Details - VoltNexis</title>
+    <meta name="description" id="page-description" content="View image details and photographer information">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">VoltNexis</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container image-detail-page">
+        <!-- Ad Space -->
+        <div class="ad-space">
+            <div class="ad-banner">
+                <p>Advertisement</p>
+            </div>
+        </div>
+
+        <div class="image-detail-container">
+            <div class="image-section">
+                <img id="main-image" src="" alt="" class="main-image">
+                <div class="image-actions">
+                    <button class="download-btn">Download</button>
+                    <button class="share-btn">Share</button>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h1 id="image-title">Loading...</h1>
+                <p id="image-description">Loading description...</p>
+                
+                <div class="image-stats">
+                    <div class="stat">
+                        <span class="stat-label">Views:</span>
+                        <span id="view-count">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Size:</span>
+                        <span id="file-size">0 KB</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Type:</span>
+                        <span id="file-type">-</span>
+                    </div>
+                </div>
+
+                <div class="photographer-info">
+                    <h3>Photographer</h3>
+                    <div class="photographer-card" id="photographer-card">
+                        <img id="photographer-avatar" src="" alt="Photographer" class="photographer-avatar">
+                        <div class="photographer-details">
+                            <h4 id="photographer-name">Loading...</h4>
+                            <p id="photographer-bio">Loading bio...</p>
+                            <button class="view-profile-btn" id="view-profile-btn">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Images -->
+        <section class="related-images">
+            <h2>More from this photographer</h2>
+            <div class="related-grid" id="related-grid">
+                <!-- Related images will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 VoltNexis Image Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="supabase-config.js"></script>
+    <script src="image-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">User Profile - VoltNexis</title>
+    <meta name="description" id="page-description" content="View photographer profile and their image collection">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">VoltNexis</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container profile-page">
+        <!-- Ad Space -->
+        <div class="ad-space">
+            <div class="ad-banner">
+                <p>Advertisement</p>
+            </div>
+        </div>
+
+        <div class="profile-header">
+            <div class="profile-info">
+                <img id="profile-avatar" src="" alt="Profile" class="profile-avatar">
+                <div class="profile-details">
+                    <h1 id="profile-username">Loading...</h1>
+                    <p id="profile-bio">Loading bio...</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="image-count">0</span>
+                            <span class="stat-label">Images</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="total-views">0</span>
+                            <span class="stat-label">Total Views</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="member-since">-</span>
+                            <span class="stat-label">Member Since</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="user-gallery">
+            <h2>Images by <span id="gallery-username">this user</span></h2>
+            <div class="grid-container" id="user-images-grid">
+                <!-- User images will be loaded here -->
+            </div>
+            <div id="no-images" class="no-images" style="display: none;">
+                <p>This user hasn't uploaded any images yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 VoltNexis Image Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="supabase-config.js"></script>
+    <script src="person.js"></script>
+</body>
+</html>

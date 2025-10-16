@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const imageGrid = document.getElementById('imageGrid');
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     let currentPage = 0;
-    const imagesPerPage = 6;
+    const imagesPerPage = 8;
     let isLoading = false;
 
     // Initialize hero slideshow
@@ -169,3 +169,4 @@ function startSlideshow() {
         slideInterval = setInterval(nextSlide, 4000);
     });
 }
+
